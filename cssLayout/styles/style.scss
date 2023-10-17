@@ -1,0 +1,104 @@
+@import "./reset.scss";
+
+body {
+  background-color: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    gap: 10px;
+    color: white;
+    width: max-content;
+    .header__list-item {
+      padding: 10px;
+      border: 1px solid rgba($color: #fff, $alpha: 0.8);
+      border-radius: 20px;
+    }
+    .header__list-item--inverted {
+      background-color: #fff;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  .cards__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 40px;
+    .card__title {
+      font-size: 28px;
+    }
+    .card__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        padding: 7px 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
+      .price {
+        background-color: #e9affc;
+      }
+      .price--free {
+        background-color: rgb(255, 221, 44);
+      }
+      .length {
+        background-color: white;
+      }
+    }
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+    &:first-child {
+      background-color: #292d33;
+      color: white;
+      border: 1px solid white;
+      span {
+        color: black;
+      }
+    }
+    &:nth-child(2) {
+      background-color: #f5f4ef;
+    }
+    &:nth-child(3) {
+      background-color: #f8fcb5;
+    }
+    &:nth-child(4) {
+      background-color: #b19ff6;
+    }
+    &:nth-child(5) {
+      background-color: #fed3d3;
+    }
+    &:nth-child(6) {
+      background-color: #d0fedf;
+    }
+  }
+}
